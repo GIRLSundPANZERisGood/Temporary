@@ -6,9 +6,13 @@ $(document).ready(function(){
           arg[kv[0]]=kv[1];
   }
 
-  //setInterval(function(){
-  //  console.log(arg.url);
-   //$("#pdf").attr('src', arg.url);
-  //},3000);
+  setInterval(function(){
+    var iframe= document.getElementById('pdf');
+    var idoc= iframe.contentDocument || iframe.contentWindow.document; // ie compatibility
+
+    console.log(idoc.getSelection().toString());
+     //  console.log(arg.url);
+     //$("#pdf").attr('src', arg.url);
+  },3000);
 
 });
